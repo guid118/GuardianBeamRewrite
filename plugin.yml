@@ -1,0 +1,17 @@
+main: me.guid118.GuardianLaserRewrite.Main
+name: GuardianLaserRewrite
+version: '0.1'
+description: A test plugin
+load: POSTWORLD
+author: guid118, SkytAsul
+website: spigotmc.org
+commands:
+  Laserset:
+   description: set a laser!
+   permission: GuardianLaser.set
+   permission-message: You do not have permission!
+   usage: /laserset [x1] [y1] [z1] [x2] [y2] [z2] Duration(Ticks(20/sec)) View-Distance
+  Laserstop:
+   description: Stop the laser before its duration has ended
+   permission: GuardianLaser.stop
+   
