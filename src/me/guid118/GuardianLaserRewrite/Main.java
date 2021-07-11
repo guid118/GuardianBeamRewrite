@@ -8,7 +8,7 @@ public class Main extends JavaPlugin{
 		
 		this.getCommand("laserset").setExecutor(new Commandlaserset());
 		this.getCommand("laserstop").setExecutor(new Commandlaserstop());
-		
+		this.getCommand("fireworks").setExecutor(new CommandFireworks());
 		
 		
 	}

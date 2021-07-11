@@ -7,11 +7,11 @@ import org.bukkit.command.CommandSender;
 
 public class Commandlaserstop implements CommandExecutor {
 
-	private Laser laser;
 	
 	@Override
-	public boolean onCommand(CommandSender arg0, Command arg1, String arg2, String[] arg3) {
-		laser.stop();
+	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
+		if (sender.hasPermission("Guardianlaser.Laserstop"))
+		Commandlaserset.laser.stop();
 		return true;
 	}
 

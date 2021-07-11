@@ -14,4 +14,8 @@ commands:
   Laserstop:
    description: Stop the laser before its duration has ended
    permission: GuardianLaser.stop
+  Fireworks:
+   description: Summon fireworks
+   permission: GuardianLaser.fireworks.wall
+   usage: /fireworks <wall, ultimate>
    
