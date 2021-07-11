@@ -1,0 +1,18 @@
+package me.guid118.GuardianLaserRewrite;
+
+import org.bukkit.command.Command;
+import org.bukkit.command.CommandExecutor;
+import org.bukkit.command.CommandSender;
+
+
+public class Commandlaserstop implements CommandExecutor {
+
+	private Laser laser;
+	
+	@Override
+	public boolean onCommand(CommandSender arg0, Command arg1, String arg2, String[] arg3) {
+		laser.stop();
+		return true;
+	}
+
+}

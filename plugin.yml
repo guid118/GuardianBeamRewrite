@@ -10,7 +10,7 @@ commands:
    description: set a laser!
    permission: GuardianLaser.set
    permission-message: You do not have permission!
-   usage: /laserset [x1] [y1] [z1] [x2] [y2] [z2] Duration(Ticks(20/sec)) View-Distance
+   usage: /laserset [x1] [y1] [z1] [x2] [y2] [z2] Duration(Ticks(20/sec)) View-Distance world
   Laserstop:
    description: Stop the laser before its duration has ended
    permission: GuardianLaser.stop
