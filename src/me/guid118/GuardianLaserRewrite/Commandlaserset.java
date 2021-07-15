@@ -50,7 +50,12 @@ public class Commandlaserset implements CommandExecutor, Plugin {
 
 	@Override
 	public List<String> onTabComplete(CommandSender arg0, Command arg1, String arg2, String[] arg3) {
-		// TODO Auto-generated method stub
+		
+		
+		
+		
+		
+		
 		return null;
 	}
 
