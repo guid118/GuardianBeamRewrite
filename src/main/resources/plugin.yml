@@ -1,0 +1,20 @@
+name: Guardianbeam
+version: '${project.version}'
+main: me.guid118.Guardianbeam
+api-version: 1.17
+authors: [ guid118, SkytAsul ]
+description: can summon guardianbeams in your world!
+commands:
+  Laserset:
+   description: set a laser!
+   permission: GuardianLaser.set
+   permission-message: You do not have permission!
+   usage: /laserset [x1] [y1] [z1] [x2] [y2] [z2] Duration(Ticks(20/sec)) View-Distance world
+  Laserstop:
+   description: Stop the laser before its duration has ended
+   permission: GuardianLaser.stop
+  Fireworks:
+   description: Summon fireworks
+   permission: GuardianLaser.fireworks.wall
+   usage: /fireworks <wall, ultimate>
+   
