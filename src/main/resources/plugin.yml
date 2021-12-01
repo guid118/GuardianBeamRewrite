@@ -1,6 +1,6 @@
 name: Guardianbeam
-version: '${project.version}'
-main: me.guid118.Guardianbeam
+version: '1.1-Snapshot'
+main: me.guid118.guardianbeam.Guardianbeam
 api-version: 1.17
 authors: [ guid118, SkytAsul ]
 description: can summon guardianbeams in your world!
@@ -17,4 +17,7 @@ commands:
    description: Summon fireworks
    permission: GuardianLaser.fireworks.wall
    usage: /fireworks <wall, ultimate>
-   
+  Laserpreset:
+    description: Summon lasers with a selected preset
+    premission: GuardianLaser.preset
+    usage: /laserpreset <preset>

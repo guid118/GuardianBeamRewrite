@@ -72,14 +72,13 @@ public class CommandFireworks implements CommandExecutor {
                 V.summoner(sender);
 
             }
-
             if (args[0].equalsIgnoreCase("star")) {
 
                 Star.summoner(sender);
 
             }
 
-        } else if (args.length < 1) return false;
+        } else return false;
 
         return true;
     }

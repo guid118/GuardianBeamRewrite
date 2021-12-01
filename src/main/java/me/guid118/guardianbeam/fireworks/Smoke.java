@@ -17,7 +17,7 @@ public abstract class Smoke implements Plugin {
 
             new BukkitRunnable() {
                 private int i = 0;
-                private Double d = Double.parseDouble(args[1]) * 20;
+                private final Double d = Double.parseDouble(args[1]) * 20;
                 public void run() {
                     if(i >= d) {
                         cancel();
