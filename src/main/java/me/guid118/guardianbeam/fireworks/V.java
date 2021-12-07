@@ -11,10 +11,10 @@ public class V {
 
     public static void summoner(CommandSender sender) {
 
-        Bukkit.getScheduler().runTaskLater(Guardianbeam.instance, () -> Bukkit.dispatchCommand(sender, "summon firework_rocket 9 13 -273 {LifeTime:40,FireworksItem:{id:firework_rocket,Count:1,tag:{Fireworks:{Flight:2,Explosions:[{Type:4,Flicker:0,Trail:1,Colors:[I;11743532,2437522,14602026],FadeColors:[I;11743532,2437522,14602026]}]}}}}"), 2);
-        Bukkit.getScheduler().runTaskLater(Guardianbeam.instance, () -> Bukkit.dispatchCommand(sender, "summon firework_rocket 9 13 -273 {LifeTime:50,FireworksItem:{id:firework_rocket,Count:1,tag:{Fireworks:{Flight:2,Explosions:[{Type:1,Flicker:0,Trail:1,Colors:[I;11743532,2437522,14602026],FadeColors:[I;11743532,2437522,14602026]}]}}}}"), 6);
+        Bukkit.getScheduler().runTaskLater(Guardianbeam.instance, () -> Bukkit.dispatchCommand(sender, "summon firework_rocket 9 13 -273 {LifeTime:40,FireworksItem:{id:firework_rocket,Count:1,tag:{Fireworks:{Flight:2,Explosions:[{Type:4,Flicker:0,Trail:1,Colors:[I;11743532,2437522,14602026],FadeColors:[I;11743532,2437522,14602026]}]}}}}"), 4);
+        Bukkit.getScheduler().runTaskLater(Guardianbeam.instance, () -> Bukkit.dispatchCommand(sender, "summon firework_rocket 9 13 -273 {LifeTime:50,FireworksItem:{id:firework_rocket,Count:1,tag:{Fireworks:{Flight:2,Explosions:[{Type:1,Flicker:0,Trail:1,Colors:[I;11743532,2437522,14602026],FadeColors:[I;11743532,2437522,14602026]}]}}}}"), 8);
 
-        Bukkit.getScheduler().runTaskLater(Guardianbeam.instance, () -> Bukkit.dispatchCommand(sender, "kill @e[tag=v]"), 30);
+        Bukkit.getScheduler().runTaskLater(Guardianbeam.instance, () -> Bukkit.dispatchCommand(sender, "kill @e[tag=v]"), 32);
 
 
         new BukkitRunnable() {
@@ -40,7 +40,7 @@ public class V {
 
 
             }
-        }.runTaskTimer(Guardianbeam.instance, 0L, 1L);
+        }.runTaskTimer(Guardianbeam.instance, 2L, 2L);
 
 
 

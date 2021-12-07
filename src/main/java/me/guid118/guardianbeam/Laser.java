@@ -102,6 +102,7 @@ public abstract class Laser {
                                 }
                             }else if (show.remove(p)) {
                                 sendDestroyPackets(p);
+
                             }
                         }
                     }

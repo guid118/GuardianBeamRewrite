@@ -2,10 +2,11 @@ package me.guid118.guardianbeam.CMDs;
 
 import java.io.File;
 import java.io.InputStream;
-import java.text.ParseException;
+import java.util.HashMap;
 import java.util.List;
 import java.util.logging.Logger;
 
+import me.guid118.guardianbeam.Guardianbeam;
 import me.guid118.guardianbeam.Laser;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
@@ -14,7 +15,6 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.configuration.file.FileConfiguration;
-import org.bukkit.entity.Player;
 import org.bukkit.generator.BiomeProvider;
 import org.bukkit.generator.ChunkGenerator;
 import org.bukkit.plugin.Plugin;
@@ -28,24 +28,33 @@ public class CommandGuardianlaserset implements CommandExecutor, Plugin {
     public static Laser laser;
 
 
+
+
+
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
         if(!(sender.hasPermission("GuardianLaser.guardianset"))) {
             sender.sendMessage("You do not have permission to use this command (GuardianLaser.guardianset)");
         } else {
-            if(args.length == 9) {
+            if(args.length == 10) {
+
+
                 Location loc1 = new Location(Bukkit.getWorld(args[8]), Double.parseDouble(args[0]), Double.parseDouble(args[1]), Double.parseDouble(args[2]));
                 Location loc2 = new Location(Bukkit.getWorld(args[8]), Double.parseDouble(args[3]), Double.parseDouble(args[4]), Double.parseDouble(args[5]));
                 try {
-                    CommandGuardianlaserset.laser = new Laser.GuardianLaser(loc1, loc2, Integer.parseInt(args[6]), Integer.parseInt(args[7]));
+                    Guardianbeam.lasermap.put(Integer.parseInt(args[9]), new Laser.GuardianLaser(loc1, loc2, Integer.parseInt(args[6]), Integer.parseInt(args[7])));
                 } catch (ReflectiveOperationException e) {
                     e.printStackTrace();
                 }
-
+                CommandGuardianlaserset.laser = Guardianbeam.lasermap.get(args[9]);
                 CommandGuardianlaserset.laser.start(CommandGuardianlaserset.this);
 
             } else return false;
         }
+
+
+
+
         return true;
     }
 

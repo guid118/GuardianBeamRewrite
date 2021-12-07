@@ -1,5 +1,5 @@
 name: Guardianbeam
-version: '1.2.6-Snapshot'
+version: '1.2.7-Snapshot'
 main: me.guid118.guardianbeam.Guardianbeam
 api-version: 1.17
 authors: [ guid118, SkytAsul ]
@@ -29,3 +29,7 @@ commands:
   Circle:
     description: makes a circle of particles
     permission: Guardianbeam.circle
+  Test:
+    description: test commands used to test new things
+  Moveend:
+    description: moves the end to location provided within provided amount of ticks
