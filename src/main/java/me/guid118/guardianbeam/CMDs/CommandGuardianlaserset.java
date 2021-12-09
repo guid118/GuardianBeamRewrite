@@ -11,11 +11,13 @@ import me.guid118.guardianbeam.Laser;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.Server;
+import org.bukkit.World;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.configuration.file.FileConfiguration;
 
+import org.bukkit.entity.Player;
 import org.bukkit.generator.ChunkGenerator;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.PluginDescriptionFile;
@@ -32,8 +34,9 @@ public class CommandGuardianlaserset implements CommandExecutor, Plugin {
         if(!(sender.hasPermission("GuardianLaser.guardianset"))) {
             sender.sendMessage("You do not have permission to use this command (GuardianLaser.guardianset)");
         } else {
-            if(args.length == 10) {
-
+            if(args.length != 10 && args.length != 9) {
+                return false;} else {
+                if (sender instanceof Player) { Player p = (Player) sender; World world =p.getWorld();}
 
                 Location loc1 = new Location(Bukkit.getWorld(args[8]), Double.parseDouble(args[0]), Double.parseDouble(args[1]), Double.parseDouble(args[2]));
                 Location loc2 = new Location(Bukkit.getWorld(args[8]), Double.parseDouble(args[3]), Double.parseDouble(args[4]), Double.parseDouble(args[5]));
@@ -45,7 +48,7 @@ public class CommandGuardianlaserset implements CommandExecutor, Plugin {
                 CommandGuardianlaserset.laser = Guardianbeam.lasermap.get(args[9]);
                 CommandGuardianlaserset.laser.start(CommandGuardianlaserset.this);
 
-            } else return false;
+            }
         }
 
 
