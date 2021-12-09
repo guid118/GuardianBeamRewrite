@@ -1,6 +1,6 @@
 package me.guid118.guardianbeam;
 
-import jdk.internal.access.JavaIOFileDescriptorAccess;
+
 import me.guid118.guardianbeam.CMDs.*;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.Plugin;
@@ -24,6 +24,7 @@ public class Guardianbeam extends JavaPlugin{
         Bukkit.getLogger().log(Level.INFO, "Guardianbeam is now enabled!");
 
         Objects.requireNonNull(this.getCommand("moveend")).setExecutor(new CommandMoveend());
+        Objects.requireNonNull(this.getCommand("moveend")).setTabCompleter(new CommandMoveend());
         Objects.requireNonNull(this.getCommand("test")).setExecutor(new hashtester());
         Objects.requireNonNull(this.getCommand("guardianlaserset")).setExecutor(new CommandGuardianlaserset());
         Objects.requireNonNull(this.getCommand("crystallaserset")).setExecutor(new CommandCrystallaserset());

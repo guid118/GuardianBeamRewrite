@@ -15,7 +15,7 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.configuration.file.FileConfiguration;
-import org.bukkit.generator.BiomeProvider;
+
 import org.bukkit.generator.ChunkGenerator;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.PluginDescriptionFile;
@@ -26,10 +26,6 @@ import org.bukkit.plugin.PluginLoader;
 public class CommandGuardianlaserset implements CommandExecutor, Plugin {
 
     public static Laser laser;
-
-
-
-
 
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
@@ -204,9 +200,4 @@ public class CommandGuardianlaserset implements CommandExecutor, Plugin {
     }
 
 
-    @Override
-    public BiomeProvider getDefaultBiomeProvider(String arg0, String arg1) {
-        
-        return null;
-    }
 }

@@ -38,6 +38,15 @@ public class StageIllumination {
                 }
                 }
         }
+
+        if (args[1].equalsIgnoreCase("strobe")) {
+            if (args[2].equalsIgnoreCase("on")) { strobe = true;}
+            if (args[2].equalsIgnoreCase("off")) { strobe = false;}
+
+
+
+        }
+
     }
 }
 
